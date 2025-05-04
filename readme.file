@@ -1,0 +1,32 @@
+# Student Database Project
+
+This is a basic SQL-based Student Database System that demonstrates the use of relational database design and SQL queries.
+
+## Features
+
+- **Tables**:
+  - `Students`: Holds student information like ID, name, age, gender, and department.
+  - `Courses`: Contains course ID, course name, and credits.
+  - `Enrollments`: Connects students and courses with grades.
+
+- **Includes**:
+  - SQL schema creation
+  - Sample data insertion
+  - Useful queries with `JOIN`, `GROUP BY`, and filtering
+
+## How to Use
+
+You can run this project in any MySQL environment, such as:
+
+- [DB Fiddle (Try Online)](https://dbfiddle.uk/AUEcgLGB)
+- MySQL Workbench
+- XAMPP / MAMP
+- SQLite (with minor modifications)
+
+### Sample Query
+
+```sql
+SELECT s.name, c.course_name, e.grade
+FROM Students s
+JOIN Enrollments e ON s.student_id = e.student_id
+JOIN Courses c ON e.course_id = c.course_id;
